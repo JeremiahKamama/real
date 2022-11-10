@@ -7,8 +7,11 @@ intents:
   - deny
   - rent_home
   - rent_price
+  - number_rooms
   - buy_home
   - buy_price
+  - buy_rooms
+  
 
 responses:
   utter_greet:
@@ -29,8 +32,14 @@ responses:
   utter_rent:
   - text: Yes, we have units available to rent
 
+  utter_rooms: 
+  - text: We have 2 and 3 bedroom units available. 
+
   utter_buy: 
   - text: Yes,we have units available to buy
+
+  utter_buy_rooms: 
+  - text: We have studio,2 and 3 bedroom units available. 
 
   utter_goodbye:
   - text: Bye
