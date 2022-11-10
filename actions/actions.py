@@ -1,27 +1,30 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
+""""Custom actions"""
+import os
+from typing import Dict, Text, Any, List
+import logging
+from dateutil import parser
+import sqlalchemy as sa
 
+from rasa_sdk.interfaces import Action
+from rasa_sdk.events import (
+    SlotSet,
+    EventType,
+    ActionExecuted,
+    SessionStarted,
+    Restarted,
+    FollowupAction,
+    UserUtteranceReverted,
+)
 
-# This is a simple example for a custom action which utters "Hello World!"
+from rasa_sdk import Tracker
+from rasa_sdk.executor import CollectingDispatcher
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+from actions.parsing import (
+    parse_duckling_time_as_interval,
+    parse_duckling_time,
+    get_entity_details,
+    parse_duckling_currency,
+)
+
+from actions.custom_forms import CustomFromValidationAction
+

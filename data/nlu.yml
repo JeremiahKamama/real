@@ -66,6 +66,28 @@ nlu:
     - so good
     - so perfect
 
+- intent: rent_home
+  examples: |
+    - I want a rental home
+    - I'm looking for a rental home
+    - I need a rental home
+
+- intent: buy_home
+  examples: |
+    - I want to buy a home
+    - I'm looking to buy a house
+
+- intent: rent_location
+  examples: |
+  - I want to rent a house in {location}
+  - I'm looking to rent a house in {location}
+
+- intent: buy_location
+  examples: |
+    - I want to buy a house in {location}
+    - I'm looking to buy a house in {location}
+
+
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -83,9 +105,37 @@ nlu:
     - so saad
     - so sad
 
-- intent: bot_challenge
+- intent: 
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: human_handoff
+  examples: |
+    - handoff
+    - operator
+    - I want a human
+    - can I speak to an agent
+    - real agent please
+    - real human
+    - chat with a live agent
+    - give me a person please
+    - i want to talk to a human
+    - transfer to a human
+    - Please give me to a human
+    - can I talk to human?
+    - can I talk to human
+    - talk to human
+    - i want human :(
+    - can i talk to human
+    - i want to talk to a human
+    - i want to speak to human
+    - can i talk to a real person?
+    - connect me to a real person
+    - I need a real person
+    - can i took with a real person
+    - let me speak to a real person
+    - let me speak to a real person please
+    - i want to talk to a real person
