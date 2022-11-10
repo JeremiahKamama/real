@@ -9,7 +9,7 @@ stories:
   - intent: rent_home
   - action: utter_rent
   - intent: rent_price
-  - action: utter_price
+  - action: utter_rent_price
   - intent: affirm
   - action: utter_goodbye
 
@@ -17,10 +17,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: rent_home
+  - intent: buy_home
   - action: utter_buy
   - intent: buy_price
-  - action: utter_price
+  - action: utter_buy_price
   - intent: affirm
   - action: utter_goodbye
-

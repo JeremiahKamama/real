@@ -79,8 +79,8 @@ nlu:
 
 - intent: rent_location
   examples: |
-  - I want to rent a house in {location}
-  - I'm looking to rent a house in {location}
+   - I want to rent a house in {location}
+   - I'm looking to rent a house in {location}
 
 - intent: buy_location
   examples: |

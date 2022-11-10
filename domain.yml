@@ -5,29 +5,38 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - rent_home
+  - rent_price
+  - buy_home
+  - buy_price
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: Hey! How are you?
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: Did that help you?
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: Great, carry on!
+
+  utter_buy_price:
+  - text: It costs $100,000
+
+  utter_rent_price:
+  - text: It costs $400 per month
+
+  utter_rent:
+  - text: Yes, we have units available to rent
+
+  utter_buy: 
+  - text: Yes,we have units available to buy
 
   utter_goodbye:
-  - text: "Bye"
+  - text: Bye
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_out_of_scope:
+  - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
 
 session_config:
   session_expiration_time: 60
