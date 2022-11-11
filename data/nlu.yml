@@ -105,6 +105,17 @@ nlu:
     - so saad
     - so sad
 
+- intent: number_rooms
+  examples: |
+  
+- intent: rent_price
+  examples: |
+- intent: buy_rooms
+  examples: |
+- intent: buy_price
+  examples: |
+
+
 - intent: 
   examples: |
     - are you a bot?

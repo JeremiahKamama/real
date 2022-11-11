@@ -9,22 +9,27 @@ intents:
   - rent_price
   - number_rooms
   - buy_home
-  - buy_price
   - buy_rooms
+ # - additional_plans
+  - payment_plans
   
 
 responses:
   utter_greet:
-  - text: Hey! How are you?
+  - text: Hey! I'm Chase, your real estate agent. Please choose what you're interested in
+    buttons:
+      title: Rent home
+      payload: 'inform {{"action":"rent"}}'
+      title: Buy home
+      payload: 'inform {{"action":"buy"}}'
+      title: Contact us
+      payload: 'inform{{"action":"call"}}'
 
   utter_did_that_help:
   - text: Did that help you?
 
   utter_happy:
   - text: Great, carry on!
-
-  utter_buy_price:
-  - text: It costs $100,000
 
   utter_rent_price:
   - text: It costs $400 per month
@@ -33,16 +38,34 @@ responses:
   - text: Yes, we have units available to rent
 
   utter_rooms: 
-  - text: We have 2 and 3 bedroom units available. 
+  - text: Would you like to rent a 2 bedroom or a 3 bedroom unit?
+    buttons: 
+    - title: "2 bedroom"
+      payload:  '/inform{{"bedroom": "two"}}'
+    - title: "3 bedroom"
+      payload: '/inform {{"bedroom": "three"}}'
 
   utter_buy: 
   - text: Yes,we have units available to buy
+
+  utter_payment: 
+  - text: We have 3 payment plans in US $$. Please choose one appropriate for you
+    buttons: 
+    - title: "Cash Buy: $63,750 ($10,000 discount)"
+      payload: 'inform{{"payment": "cash buy"}}'
+    - title: "12-Month Plan: $68,530"
+      payload: 'inform{{"payment": "12-Month"}}'
+    - title: "24-Month Plan: $73,750"
+      payload: 'inform{{"payment": "24-Month"}}'
 
   utter_buy_rooms: 
   - text: We have studio,2 and 3 bedroom units available. 
 
   utter_goodbye:
   - text: Bye
+
+  utter_price:
+  - text: 2 Bedroom is available for $300
 
   utter_out_of_scope:
   - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.

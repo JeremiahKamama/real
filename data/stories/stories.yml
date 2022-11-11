@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+- story: rent house
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: rent_home
+  - action: utter_rent
+  - intent: number_rooms
+  - action: utter_price
+  - intent: rent_price
+  - action: utter_rent_price
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: buy house
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: buy_home
+  - action: utter_buy
+  - intent: buy_rooms
+  - action: utter_buy_rooms
+  - intent: payment_plans
+  - action: utter_payment
+#  - intent: additional_plans
+#  - action: utter_payment_plans
+  - intent: affirm
+  - action: utter_goodbye
